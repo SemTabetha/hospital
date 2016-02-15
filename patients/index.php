@@ -24,8 +24,8 @@
 				<td><?=$patient['species']?></td>
 				<td><?=$patient['status']?></td>
 				<td><?=$patient['gender']?></td>
-				<td class="center"><a href="edit.php?id=<?=$patient['id']?>">edit</a></td>
-				<td class="center"><a href="delete.php?id=<?=$patient['id']?>">delete</a></td>
+				<td class="center" id="edit"><a href="edit.php?id=<?=$patient['id']?>">edit</a></td>
+				<td class="center" id="delete"><a href="delete.php?id=<?=$patient['id']?>">delete</a></td>
 			</tr>
 
 <?php

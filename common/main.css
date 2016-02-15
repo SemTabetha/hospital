@@ -26,6 +26,14 @@ td.center{
 	text-align : center;
 }
 
+#edit{
+	width:40px;
+}
+
+#delete{
+	width:60px;
+}
+
 a {
 	color : black;
 }
