@@ -2,12 +2,12 @@
 	require_once "edit.logic.php";
 	include "../common/header.php";
 ?>
-	<h1>Edit client</h1>
+	<h1>Edit species</h1>
 	<form method="post">
 		<div>
-			<input type="hidden" name="id" value="<?=$client['id']?>">
+			<input type="hidden" name="id" value="<?=$species['id']?>">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" value="<?=$client['name']?>">
+			<input type="text" id="name" name="name" value="<?=$species['name']?>" required>
 		</div>
 		<div>
 			<label></label>

@@ -7,15 +7,15 @@
 		<div>
 			<input type="hidden" name="id" value="<?=$patient['id']?>">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" value="<?=$patient['name']?>">
+			<input type="text" id="name" name="name" value="<?=$patient['name']?>" required>
 		</div>
 		<div>
 			<label for="name">Species:</label>
-			<input type="text" id="species" name="species" value="<?=$patient['species']?>">
+			<input type="text" id="species" name="species" value="<?=$patient['species']?>" required>
 		</div>
 		<div>
 			<label for="name">Status:</label>
-			<textarea id="status" name="status"><?=$patient['status']?></textarea>
+			<textarea id="status" name="status" required><?=$patient['status']?></textarea>
 		</div>
 		<div>
 			<label for="name">Gender:</label>

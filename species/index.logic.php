@@ -2,10 +2,10 @@
 	
 	$db = new mysqli('localhost','root','','hospital');
 
-	$query = "SELECT * FROM client";
+	$query = "SELECT * FROM species";
 	$result = $db->query($query);
 	
-	$clients = $result->fetch_all(MYSQLI_ASSOC);
+	$specie = $result->fetch_all(MYSQLI_ASSOC);
 
 	
 ?>

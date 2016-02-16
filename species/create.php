@@ -2,11 +2,11 @@
 	require_once "create.logic.php";
 	include "../common/header.php";
 ?>
-	<h1>New client</h1>
+	<h1>New species</h1>
 	<form method="post">
 		<div>
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name">
+			<input type="text" id="name" name="name" required>
 		</div>
 		<div>
 			<label></label>

@@ -1,17 +1,17 @@
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "GET"):
-		$client = NULL;
+		$species = NULL;
 		if (isset($_GET['id'])):
 			// Get Patient for id
 			$db = new mysqli('localhost','root','','hospital');
 			$id = $db->escape_string($_GET["id"]);
 			
-			$query = "SELECT * FROM client WHERE id=$id";
+			$query = "SELECT * FROM species WHERE id=$id";
 			$result = $db->query($query);
 		
-			$client = $result->fetch_assoc();		
+			$species = $result->fetch_assoc();		
 		endif;
-		if ($client == NULL):
+		if ($species == NULL):
 			// No patient found
 			http_response_code(404);
 			include("../common/not_found.php");
@@ -25,7 +25,7 @@
 		$name = $db->escape_string($_POST["name"]);
 		
 		// Prepare query and execute
-		$query = "UPDATE client SET name='$name' WHERE id=$id";
+		$query = "UPDATE species SET name='$name' WHERE id=$id";
 		$result = $db->query($query);
 	
     // Tell the browser to go back to the index page.

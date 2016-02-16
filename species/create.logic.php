@@ -6,7 +6,7 @@
 		$name = $db->escape_string($_POST["name"]);
 		
 		// Prepare query and execute
-		$query = "INSERT INTO client (name) VALUES ('$name')";
+		$query = "INSERT INTO species (name) VALUES ('$name')";
 		$result = $db->query($query);
 	
     // Tell the browser to go back to the index page.

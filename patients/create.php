@@ -6,15 +6,15 @@
 	<form method="post">
 		<div>
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name">
+			<input type="text" id="name" name="name" required>
 		</div>
 		<div>
 			<label for="name">Species:</label>
-			<input type="text" id="species" name="species">
+			<input type="text" id="species" name="species" required>
 		</div>
 		<div>
 			<label for="name">Status:</label>
-			<textarea id="status" name="status"></textarea>
+			<textarea id="status" name="status" required></textarea>
 		</div>
 		<div>
 			<label for="name">Gender:</label>

@@ -7,7 +7,7 @@
 		<div>
 			<input type="hidden" name="id" value="<?=$client['id']?>">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" value="<?=$client['name']?>">
+			<input type="text" id="name" name="name" value="<?=$client['name']?>" required>
 		</div>
 		<div>
 			<label></label>

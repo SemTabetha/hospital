@@ -6,7 +6,7 @@
 	<form method="post">
 		<div>
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name">
+			<input type="text" id="name" name="name" required>
 		</div>
 		<div>
 			<label></label>
