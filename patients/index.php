@@ -8,7 +8,7 @@
 		<thead>
 			<tr>
 			<form name="Table Properties" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-				<th><button type="submit" name="sort_name" class="button" value="<?php echo $value; ?>"> Name </a></th>
+				<th id="sort"><a class="sort_name" href="index.php?value=<?php echo $value; ?>">Name</a></th>
 				<th>Species</th>
 				<th>Status</th>
 				<th>Gender</th>
@@ -27,7 +27,7 @@
 				<td><?=$patient['species']?></td>
 				<td><?=$patient['status']?></td>
 				<td><?=$patient['gender']?></td>
-				<td></td>
+				<td><?=$patient['client']?></td>
 				<td class="center" id="edit"><a href="edit.php?id=<?=$patient['id']?>">edit</a></td>
 				<td class="center" id="delete"><a href="delete.php?id=<?=$patient['id']?>">delete</a></td>
 			</tr>

@@ -37,6 +37,14 @@ td.center{
 a {
 	color : black;
 }
+
+a.sort_name{
+	text-decoration: none;
+}
+
+a.sort_name:hover{
+	text-decoration: underline;
+}
 p.options{
 	text-align : right;
 }

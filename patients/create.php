@@ -1,7 +1,7 @@
 <?php
 	require_once "create.logic.php";
 	include "../common/header.php";
-?>
+?> 
 	<h1>New patiënt</h1>
 	<form method="post">
 		<div>
@@ -10,7 +10,14 @@
 		</div>
 		<div>
 			<label for="name">Species:</label>
-			<input type="text" id="species" name="species" required>
+
+			<select name="speciess" required>
+				<option value="">Select your species</option>
+<?php 
+foreach ( $species as $specie ):?>
+<option><?= $specie['name']?></option>
+<?php endforeach;?>
+			</select>
 		</div>
 		<div>
 			<label for="name">Status:</label>
@@ -20,6 +27,17 @@
 			<label for="name">Gender:</label>
 			<input type="radio" name="gender" value="male">Male
 			<input type="radio" name="gender" value="female">Female
+		</div>
+		<div>
+			<label for="name">Client:</label>
+
+			<select name="clientt" >
+					<option value="">Select your client</option>
+<?php 
+foreach ( $clients as $client ):?>
+<option><?= $client['name']?></option>
+<?php endforeach;?>
+			</select>
 		</div>
 		<div>
 			<label></label>

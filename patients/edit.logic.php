@@ -23,12 +23,13 @@
 		// Prepare data for update
 		$id = $db->escape_string($_POST["id"]);
 		$name = $db->escape_string($_POST["name"]);
-		$species = $db->escape_string($_POST["species"]);
+		$species = $db->escape_string($_POST["speciess"]);
 		$status = $db->escape_string($_POST["status"]);
 		$gender = $db->escape_string($_POST["gender"]);
-		
+		$client = $db->escape_string($_POST["clientt"]);
+
 		// Prepare query and execute
-		$query = "UPDATE patient SET name='$name', species='$species', status='$status', gender='$gender' WHERE id=$id";
+		$query = "UPDATE patient SET name='$name', species='$species', status='$status', gender='$gender', client='$client' WHERE id=$id";
 		$result = $db->query($query);
 	
     // Tell the browser to go back to the index page.
@@ -36,4 +37,14 @@
     exit();
 	endif;
 
-?>
+	$db = new mysqli('localhost','root','','hospital');  
+	$query_species = "SELECT * FROM `species`";
+	$result_species = $db->query($query_species);
+	
+	$species = $result_species  ->fetch_all(MYSQLI_ASSOC);
+
+
+	$query_clients = "SELECT * FROM `client`";
+	$result_clients = $db->query($query_clients);
+	
+	$clients = $result_clients  ->fetch_all(MYSQLI_ASSOC);
